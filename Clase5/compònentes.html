@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+ 
+    <title>componentes</title>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- voy a getboutstrap y descargo el link de JV para dar efectos visuales -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<!--  <span>estiquetas de linea : podemos aplicar estilos a un texto.
+
+    <div> es una estiqueta de bloque, sirve para agrupar elementos.
+   class:
+        class->para cualquier html -->
+    <!-- bootsrap ESTILOS para esta etiqueta : tipografia, color y tamaño -->
+<!-- <button class="btn btn-dark" -->
+
+     <div class="container"> 
+        <div class="row pt-3 pb-2 pl-4" style="background:olive;height:100px"> 
+
+            <!-- Pt: padding top
+            pb:padding botton
+        pl:padding:left
+    pr:padding right -->
+           
+            <div class="col-6 MX-auto" >
+                <button type="button" class="btn btn-dark">Usuarios conectados
+            
+                         <span class="badge badge-warning">
+                            4
+                        </span>
+                </button>
+            </div>
+        </div>
+
+<div class="row">
+
+
+    <!-- cuando pongo un "." asume que es una clase "*4" para hacerlo 4 veces -->
+    
+         <div class="col-4">
+
+                <div class="card text-center mt-4">
+                        <!-- aplicamos un margen con mt-4 -->
+<!-- thead,tbody,tfoother -->
+
+                     <div class="card-body">
+                            <!-- card-title aplica un padding definidd al alemento -->
+                            <h3 class="card-title"> ejemplo de card bootsrap</h3>
+                            <p class="card-text">el componente card define una serie de estilos adeptables a notas , formularios de envio , correo
+                                login, de registro, etc
+                            </p>
+                    </div>
+
+                </div>
+         </div>
+    
+    
+        <div class="col-4 pt-3 pl-4">
+            <div class="card bg-dark text-white border-warning text-center mt-4"> 
+                                    <!-- algunas modificaciones de prueba para mi caja -->
+
+                <div class="card-body ">
+
+                        <h3 class="card-title"> ejemplo de card bootsrap</h3>
+                        <p class="card-text">el componente card define una serie de estilos adeptables a notas , formularios de envio , correo
+                        login, de registro, etc
+                        </p>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    <div class="col-4">
+
+
+
+
+    </div>
+
+
+
+</div>
+
+<div class="row">
+    <div class="col-4"></div>
+        <div class="col-4 text-center pt-5">
+                <button type="button" class="btn btn-primary mt-5" data-toggle="modal" data-target="#exampleModal">
+                        Launch demo modal
+                </button>
+
+        </div>
+    <div class="col-4"></div>
+</div>
+
+    <!-- Button trigger modal -->
+
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+ <!-- MARGEN Y PADDING 
+            Padding, puedo separar elementos internos en un contenedor
+            Marging puedo separar elementos externos en un contenedor
+
+            EL MARGIN Y EL PADIN ES HASTA 6 apox-->
+
+</body>
+</html>
