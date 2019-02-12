@@ -1,0 +1,67 @@
+.contenedorimagen {
+    /* como ponemos una imagen de fonde de un contenedor
+    local la paja de las rutas
+    web
+     */
+background: url("https://content3.cdnprado.net/imagenes/proyectos/personalizacion/7317a29a-d846-4c54-9034-6a114c3658fe/ElPrado/interactivos/bosco/imgs/bosco-splash.jpg");
+height:555px;
+width:900px;
+
+
+
+    background-repeat: no-repeat;
+    /* background: repeat-x repeat-y; se repite hacia los lados; */
+    /* para acomodar la imagen no debe repetirse */
+    /* background-position:300px 50px; */
+    margin:60PX auto ;
+    border:4px solid black;
+    /* padding-bottom:400px; */
+}
+
+
+.contenedorimagen h1 {
+    font-family:  Arial, Helvetica, sans-serif;
+    text-align: center;
+    }
+
+.contenidoimagen {
+    background: url("http://media.tnh.me/56f1cb89ddcb214946b19a76/57d5b8af5ccacf446bcfb096");
+
+    height:550px;
+    background-repeat: no-repeat;
+   align-content:;
+
+    transform: scale(0.05) 
+    
+
+
+}
+
+/* con los dos puntos defino una pseudo clase */
+
+a:link {
+    color: black;
+    font-weight:bold;
+    text-decoration: none;
+
+
+}
+
+/* cuando ya hice click  */
+
+a:visited {
+    color:green;
+    font-weight:bold ;
+    background:black ;
+    text-decoration: none;
+}
+
+a:hover {
+    background: violet;
+    color:olive;
+    border:1px solid  rgb(117, 116, 173);
+}
+a:active{
+    color:pink;
+
+}

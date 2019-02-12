@@ -1,0 +1,22 @@
+.contenedor {
+    background:black;
+    width: 450px;
+    background:red;
+    padding-top:20px;
+    
+
+}
+
+.bby {
+ width:50% ;
+height:100px;
+/* padding-top: 20px;
+padding-left: 20px; puedo resumir esto */
+/* si quiero que mi caja hacer 10 de alto y 20 de ancho
+paddind: 20 30 10 20
+paddind: 10px 20px
+padding: 50px */
+padding: 20px 30px 10px 20px;
+ background:blue;
+ size:400px;
+}

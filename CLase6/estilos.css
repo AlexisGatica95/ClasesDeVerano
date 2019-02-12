@@ -1,0 +1,13 @@
+h1{background:coral;
+color:white;
+font-size:42px;
+}
+/* 
+
+background:color de fondo
+text-aling: left, right, center, justify */
+
+h2,h3,h4,h5{
+    color: blue;
+    text-decoration:underline;
+}

@@ -1,0 +1,20 @@
+.contenedor {
+    background:black;
+    height: 500px;
+
+}
+
+.bby {
+ width:50% ;
+ background:red;
+ size:400px;
+ height:100px;
+ padding-top:20px; 
+ padding-left:20px;
+}
+
+p {
+    color:white;
+    font-weight:bold;
+}
+/* con el padding top  se agranda la caja */

@@ -1,0 +1,99 @@
+h1{background:coral;
+color:white;
+font-size:42px;
+}
+/* 
+
+background:color de fondo
+text-aling: left, right, center, justify */
+
+h2,h3,h4,h5{
+    color: blue;
+    text-decoration:underline;
+}
+
+/* text-decoration:name
+text-decoration:underline
+text-overline
+text-decoration: line-through */
+
+
+p {
+    /* *quiero destacar algo* 
+     100,600, bolt
+     bold:pone en negrita el texto que querramos
+     font-weigth:500 */
+font-weight: bold;
+text-decoration:overline;
+font-family:Verdana, Geneva, Tahoma, sans-serif 
+
+}
+/* bootstrap trabajba con  CLASES
+class="container" */
+
+/* como hago una clase en css */
+
+.resaltado {
+    background:violet;
+    color: black;
+    font-weight:900;
+    text-decoration:line-through;
+    width:600px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.enlinea {
+ display:inline   
+}
+
+/* textoespecifico 
+camelcase
+textoespecificoCss
+*/
+
+.textoespecifico p {
+    color:red;
+
+}
+
+.textoespecifico h1 {
+    color:plum
+}
+
+.ej p em {
+
+    color:olive;
+    background:black;
+    font-weight: bold;
+}
+
+.fa-ankh {
+    color:green;
+    font-size:33px;
+}
+.parrafo {
+    /*  */
+    height:100px;
+    color:blue;
+    text-align:right;
+}
+
+.parrafo p {
+    /* solo afecta a los parrafos dentro de mi clase */
+    background:tomato;
+    color:white;
+    text-align:center;
+}
+.alineadoaladerecha {
+    text-align:right;
+    width:80%;
+    background:orange;
+}
+
+/* voy a hacer que ocupe 50% */
+
+.queocupe50 {
+    background:blue
+
+
+}
