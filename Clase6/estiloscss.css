@@ -1,0 +1,52 @@
+.primero {
+    background:red;
+    text-align:right;
+    text-decoration:underline;
+    font-weight:bold;
+    width:80%;
+
+}
+
+/* solo afecta  a los elementos que se encuentan en p en este caso */
+
+.parrafo p {
+    background:rgb(41, 38, 85);
+    color: blueviolet;
+    text-align:center;
+    
+    height: 100px;
+}
+
+.parrafo {
+  width:50%;   
+ }
+
+.justificado {
+    background: brown; 
+    color:white;
+    text-align: justify;
+    height: 200px;
+}
+
+.contenedor {
+    widows: 200px;
+    height: 300px;
+    background: rgb(235, 85, 16);
+    padding-top:20px;
+    padding-left:50px;
+}
+
+.contenedor2gg {
+    widows: 20px;
+    height: 30px;
+    background: rgb(136, 4, 4);
+    width:50%;
+    text-align: center;
+    padding: 20px 30px 10px 20px;   
+}   
+
+.contenedor2gg p {
+    color:white;
+    font-weight: bold;
+}
+
