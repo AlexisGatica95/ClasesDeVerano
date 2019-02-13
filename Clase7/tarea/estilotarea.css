@@ -1,0 +1,80 @@
+ul {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.active {
+    background-color: rgba(50, 34, 58, 0.932);
+ }
+
+li a{
+text-decoration:none ;
+ color:#7E6D1D;  
+
+}
+
+  li a:hover {
+/* hover quiere decir cuando le paso el mouse sobre pasa esto */
+    background-color: rgb(67, 145, 3);
+    color: rgb(114, 2, 2);
+}
+
+footer {
+  position: relative;
+  /* Altura total del footer en px con valor negativo */
+  margin-top: -50px;
+  /* Altura del footer en px. Se han restado los 5px del margen
+     superior mas los 5px del margen inferior
+  */
+  height: 40px;
+  padding:5px 0px;
+  clear: both;
+  background: #39233d;
+  text-align: center;
+  color: #fff;
+ 
+  margin: 0 auto;
+  /* margin coloca al footer abajo */
+}
+
+.contenedorimagen {
+    background: url("https://rufinoweb.com.ar/wp-content/uploads/2018/04/portada-rayo.jpg")  no-repeat center center fixed;
+  height: 80px;
+  width: 80%;
+  background-size: cover; 
+/*  background-size: cover cubre todo el espacio con la imagen */
+  /* background-position: 300px 50px; */
+  margin: 60PX auto;
+  border: 4px solid black;
+  /* padding-bottom: 400px; */
+}
+
+.textoimagen p {
+  font-family:  Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size:60px;
+
+}
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(196, 0, 0);
+  color: white;
+}
