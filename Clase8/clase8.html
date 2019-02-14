@@ -1,0 +1,201 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>clase 8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+ 
+    <!-- flexbox es un modulo de diseño Css, viene del concepto de caja flexible, fue pensado para 
+        el diseño web complejo escribiendo muy pocas lineas de codigo.
+    , evitando el uso de floats , evitando el uso de los positions.
+nos permite posicionar nuestros elementos en cualquier parte de nuestro HTML, 
+cambiandole el orden sin afectar la estructura nos permite alinear elentos de manera horizontal 
+y vertical de una forma censilla.Si lo queriamos mover un elemento teniamos que calcular 
+y agegar un margin, encambio con fexbox es mas sencillo ,-->
+
+<style>
+* {
+    margin:0;
+    padding:0;
+}
+
+/* el asterisco representa all,TODO */
+
+/* flexbox es responsiva */
+
+.PADRE {
+        display: flex; /*esta propiedad esta apta para usar flexbox
+                        IMPORTANTE: ESTA PROPIEDAD SOLO VA EN LA PROPIEDAD PADRE*/
+        /* flex-direction: row;  esta estraba por defecto */
+        flex-direction: column; /*tambien tenemos column-reverse*/
+        flex-direction: row-reverse;  /*hace un espejado*/
+/* nos permite manipular el orden de los elementos */
+        justify-content: center;/*posicionamiento  a lo largo de eje x
+        flex-star
+        flex-end
+        center
+        */
+        justify-content: space-around; /* tambien tenemos space-betwen*/
+       align-items: flex-end;
+       align-items: center;
+/* height: auto;   con esto le damos todo la altura del contenedor que lo contiene */
+        background:url("https://moonlightpathphotography.files.wordpress.com/2016/03/every_first_generation_pokemon__by_kingjupiter-d6buxb5.png");
+        height: 538px;
+        /* partecita de abajo */
+       /* align-items: stretch; 
+        se comporta parecido a height auto, con la diferencia que este alinea 
+        a TODOS los componentes que estand dentro de es contenedor*/
+    }
+    .hijo {
+        background: rgba(68, 84, 87, 0.788);
+        border: 2px solid red;
+        border-radius: 90px;
+        margin: 70px ;
+        text-align: center;
+        padding-top:60px; 
+        
+        font-family:arial narrow;
+        justify-content:space-around;
+        width: 30%;
+        font-size: 33px;
+        color: rgb(0, 0, 0);
+        height: 200px;
+    }
+
+    .PADRE2 {
+        display: flex;
+        background: rgb(14, 13, 13);
+        height: 400px;
+        /* flex-wrap: nowrap  viene por defecto, por eso podemos acomodar los componente 
+        sin que se baje uno debajo del otro */
+        flex-wrap: wrap; /*respeta el ancho del contenedor y no los acomoda,
+        si uno esta de mas se pasa abajo */
+/* quedaba espaciado por el tamaño del contenedor, 
+si aumentamos el tamaño de nuestro contenedor, las cajitas estaran separadas verticalmente */
+    }
+    .hijo2 {
+        background: url("https://blog.movistar.com.sv/wp-content/uploads/2017/02/giphy-98.gif");
+        width: 40%;
+        color:rgb(209, 197, 197);
+        font-family:monospace;
+        font-size: 30px;
+        height: 200px;
+        border: 1px solid green;
+        color: white; 
+    }
+
+    .PADRE3 {
+        display: flex;
+        height: 500px;
+        background:olive;
+        align-items: stretch;
+    }
+    .hijo3  {
+        background: url("https://media1.tenor.com/images/a7057b5bafd40c3391119b8a2cc474ca/tenor.gif?itemid=11468241");
+        background-size: cover;
+        border: 1px solid black;
+        flex-basis: 40%; 
+        order: 2; /**/
+
+    }
+    .hijo4 {
+        background: url("https://thumbs.gfycat.com/WhirlwindQuarrelsomeGibbon-size_restricted.gif");
+        border: 1px solid green;
+        background-size: cover;
+        flex-basis: 60%;
+        order: 1;
+    }
+
+
+    .TIO {
+        display: flex;
+        height: 500px;
+        background: olive;
+        align-items: stretch;
+    } 
+    .hijo5 {
+        background: url("https://pa1.narvii.com/6411/6c88e5e2971bd4ee020f44b5289bca0ae63a9184_hq.gif") no-repeat ;
+        border: 1px solid black;
+        background-size: cover;
+        flex-basis: 60%; 
+        order: 2; /**/
+
+    }
+    .hijo6 {
+        background: url("https://media.giphy.com/media/d3TzrK5JGL5BK/giphy.gif");
+        background-size: cover;
+        border: 1px solid green;
+        flex-basis: 40%;
+        order: 1;
+    }
+
+.fa-biohazard { color: rgba(238, 87, 0, 0.678);
+font-size: 20px; }
+
+</style>
+
+</head>
+<body>
+
+
+<!-- creamos un cotainer con tres cajitas, el conteiner PADRE es el que va a ser flexible -->
+    <div class="PADRE">
+        <!-- creamos un bby que se va a mover dentro de su padre, ubicandolos en la pocision que nosotros deseemos -->
+                <div class="hijo">flexbok herrramienta de css diesñada para la maquetacion</div>
+                <div class="hijo">dispone propiedades para la maquetacion</div>
+                <div class="hijo">forma vertical, horizontal etc...</div>
+                 <!-- <div class="contenedorcito">forma vertical, horizontal etc...</div>  se acomodara  -->
+ </div>
+    
+
+ 
+<div class="PADRE2">
+        <div class="hijo2"><i class="fas fa-biohazard"></i>Primer div</div>
+        <div class="hijo2"><i class="fas fa-biohazard"></i>Segundo div</div>
+        <div class="hijo2"><i class="fas fa-biohazard"></i>Tercer div</div>
+</div>
+
+<br><br><br><br>
+   
+<div class="PADRE3">
+    
+        <div class="hijo3"> mi flex-basis dice que mido 40%</div>
+        
+        <div class="hijo4"> Mi flex-basis dice que mido 60%</div>
+    
+</div>
+
+<div class="TIO">  
+    <div class="hijo5"> mi flex-basis dice que mido 60%</div>
+        
+    <div class="hijo6"> Mi flex-basis dice que mido 40%</div>
+</div>        
+
+
+</body>
+</html>
+
+<!-- podemos descargar un template y modificar :: desde  html(bosstrap) y desde el css-->
+<!-- la propiedad display inline se comporta como una linea,
+y con display block se comporta como elemento de bloque
+en concluciones nos permite alterar los elementos de la pagina
+
+
+ahora flexbox (conjunto de propiedades de css)
+
+<--  workana pagina para menejo de imagenes-->
+
+<!-- flexboz ajusta el ancho automaticamente -->
+
+<!-- podemos aplicar un height auto a contenedores..... -->
+
+<!-- start admin bosstrap4 -->
+<!-- el link de templates esta  en el repo del profe -->
+
+
+<!-- unidades de medida em , rem  -->
+
+<!-- copear las unidades del repo del profe -->
+<!-- y mas cosas de webs responsives -->

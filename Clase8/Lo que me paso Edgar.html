@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edgar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        /* asterisco representa all */
+    * {
+        margin: 0px;
+        padding: 0%;
+    }
+    /* flex box es responsiva */
+    .container {
+        display: flex; /*esta propiedad esta apta para usar flexbox
+                        IMPORTANTE: ESTA PROPIEDAD SOLO VA EN LA PROPIEDAD PADRE*/
+        /* flex-direction: row;  esta estraba por defecto */
+        flex-direction: column; /*tambien tenemos column-reverse*/
+        flex-direction: row-reverse;  /*hace un espejado*/
+/* nos permite manipular el orden de los elementos */
+        justify-content: center;/*posicionamiento  a lo largo de eje x
+        flex-star
+        flex-end
+        center
+        */
+        justify-content: space-around; /* tambien tenemos space-betwen*/
+       align-items: flex-end;
+       align-items: center;
+/* height: auto;   con esto le damos todo la altura del contenedor que lo contiene */
+        background:orange;
+        height: 600px;
+        align-items: stretch; /*se comporta parecido a height auto, con la diferencia que este alinea a todos los componentes que estand dentro de es contenedor*/
+    }
+    .contenedorcito {
+        background: black;
+        border:  1px dashed olive;
+        /* margin 0 auto
+            text-aling:center
+         */
+        justify-content:space-around;
+        width: 30%;
+        font-size: 20px;
+        color: aqua;
+        height: 200px;
+    }
+
+    /* es id tiene prioridad por que es un identificador unico */
+
+    /* oredn de los pesos
+    clases
+    elemento
+    id
+    !important
+     */
+    .prueba1 {
+        color: white;
+        background: black  ; /*ahora le dara mas bola a la clase, cobre la id*/
+        font-size: 32px;
+    }
+    #idprueba {
+        color: brown;
+        background: turquoise;
+        font-size: 32px;
+    }
+    .container2 {
+        display: flex;
+        background: tomato;
+        height: 400px;
+        /* flex-wrap: nowrap  viene por defecto, por eso podemos acomodar los componente sin que se baje uno debajo del otro */
+        flex-wrap: wrap; /*respeta el ancho del contenedor y no los acomoda,si uno esta de mas se pasa abajo */
+/* quedaba espaciado por el tamaño del contenedor, si aumentamos el tamaño de nuestro contenedor, las cajitas estaran separadas verticalmente */
+    }
+    .contenedorcito2 {
+        background: black;
+        width: 40%;
+        font-size: 30px;
+        height: 200px;
+        border: 1px solid green;
+        color: white; 
+    }
+    .contenedor3 {
+        display: flex;
+        height: 500px;
+        background: olive;
+        align-items: stretch;
+    }
+    .contenido3 {
+        background: tomato;
+        border: 1px solid black;
+        flex-basis: 40%; 
+        order: 2; /**/
+
+    }
+    .contenido4 {
+        background: tomato;
+        border: 1px solid green;
+        flex-basis: 60%;
+        order: 1;
+    }
+    hr {
+        margin-top: 30px;
+    }
+    h5 {
+        color: aqua;
+    }
+
+    @media (min-width: 800px ){
+        h5 {
+            color:green;
+        }
+    }
+
+    /* unidades de medida */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contenedorcito"> herrramienta de css diesñada para la maquetacion</div>
+        <div class="contenedorcito">dispone propiedades para la maquetacion</div>
+        <div class="contenedorcito">forma vertical, horizontal etc...</div>
+         <!-- <div class="contenedorcito">forma vertical, horizontal etc...</div>  se acomodara  -->
+    </div>
+    <div class="prueba1" id="idprueba">
+        <h2>
+            aver que estilos me toca
+        </h2>
+    </div><hr>
+    <div class="container2">
+            <div class="contenedorcito2">primer div</div>
+            <div class="contenedorcito2">segundo div</div>
+            <div class="contenedorcito2">tercer div</div>
+    </div>
+    <br><br><br><br>
+    <div class="contenedor3">
+        <div class="contenido3"> mi flex-basis dice que mido 40%</div>
+        
+        <div class="contenido4"> Mi flex-basis dice que mido 60%</div>
+    </div>
+    <hr>
+    
+    <hr>
+    
+    <hr>
+    <hr>
+    <hr>
+
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <h4>
+            titulo
+    </h4>
+    <h5>
+            de que tamaño soy?
+    </h5>
+</body>
+</html>
+
+
+
+<!-- podemos descargar un template y modificar :: desde  html(bosstrap) y desde el css-->
+<!-- la propiedad display inline se comporta como una linea,
+y con display block se comporta como elemento de bloque
+en concluciones nos permite alterar los elementos de la pagina
+
+
+ahora flexbox (conjunto de propiedades de css)
+
+<--  workana pagina para menejo de imagenes-->
+
+<!-- flexboz ajusta el ancho automaticamente -->
+
+<!-- podemos aplicar un height auto a contenedores..... -->
+
+<!-- start admin bosstrap4 -->
+<!-- el link de templates esta  en el repo del profe -->
+
+
+<!-- unidades de medida em , rem  -->
+
+<!-- copear las unidades del repo del profe -->
+<!-- y mas cosas de webs responsives -->

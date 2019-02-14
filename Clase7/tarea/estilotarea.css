@@ -19,7 +19,7 @@ text-decoration:none ;
     color: rgb(114, 2, 2);
 }
 
-footer {
+.footer {
   position: relative;
   /* Altura total del footer en px con valor negativo */
   margin-top: -50px;
@@ -38,15 +38,15 @@ footer {
 }
 
 .contenedorimagen {
-    background: url("https://rufinoweb.com.ar/wp-content/uploads/2018/04/portada-rayo.jpg")  no-repeat center center fixed;
+    background: url("https://rufinoweb.com.ar/wp-content/uploads/2018/04/portada-rayo.jpg")  no-repeat center ;
   height: 80px;
   width: 80%;
   background-size: cover; 
-/*  background-size: cover cubre todo el espacio con la imagen */
-  /* background-position: 300px 50px; */
+/* background-size: cover cubre todo el espacio con la imagen */
+/* background-position: 300px 50px; */
   margin: 60PX auto;
   border: 4px solid black;
-  /* padding-bottom: 400px; */
+ /* padding-bottom: 400px; */
 }
 
 .textoimagen p {
@@ -56,25 +56,50 @@ footer {
 
 }
 
-#customers {
+/* ahora modifico la tabla */
+
+#estilostabla {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 30%;
+  height:40px;
+
 }
 
-#customers td, #customers th {
+#estilostabla td, #estilostabla th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#estilostabla tr:nth-child(even) {background-color: #f2f2f2;}
 
-#customers tr:hover {background-color: #ddd;}
+/* con tr:nth-child  e especifica con un único argumento, que representa el patrón para los elementos coincidentes.
+ODD
+Representa elementos cuya posición numérica en una serie de hermanos es impar: 1, 3, 5, etc.
+EVEN
+Representa elementos cuya posición numérica en una serie de hermanos es par: 2, 4, 6, etc.
+:nth-child(7)
+Representa el séptimo elemento.
+:nth-child(5n)
+Representa los elementos 5, 10, 15, etc.
+:nth-child(3n+4)
+Representa los elementos 4, 7, 10, 13, etc.
+*/
 
-#customers th {
+#estilostabla tr:hover {background-color: #ddd;}
+
+#estilostabla th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
   background-color: rgb(196, 0, 0);
   color: white;
+}
+
+.ESPACIO {
+  
+  text-align:left;
+  padding-top: 30px;
+  padding-bottom: 300px;
+  
 }
