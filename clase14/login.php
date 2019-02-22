@@ -10,8 +10,8 @@
     
     <div class"row">
 
-        <DIv class"col-12">
-            <form method="post" action="registrousuario.php">
+        <div class="col-12">
+            <form method="post" action="loginusuario.php">
             <div class="form-group">
                 USUARIO:
             <input type="text" name="usuario" class="form-control">
@@ -23,7 +23,7 @@
             </div>
 
             <button type="submit" class="btn btn-dark btn-block">
-                registrar:
+                Login:
             </button>
 
           

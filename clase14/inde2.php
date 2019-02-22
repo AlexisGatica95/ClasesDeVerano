@@ -1,22 +1,22 @@
 <?php
 
-session_start ();
+session_start();
  //el usuario solo va a poder visitar este sitio si esta logeado
  //comprovamos si una variable esta definida con isset
  //si no esta definida la variable de sesion: nunca inicio sesion
 //como hacemos  para que solo los que s eregistraon entren
 
-if(isset($_SESSION['idUsuario']) && ! empty($_SESSION['idUsuario'])) //verifico que la variable de sesion tenga algo adentro
+if(isset($_SESSION['idUsuario']) && !empty($_SESSION['idUsuario'])) //verifico que la variable de sesion tenga algo adentro
 {
-require_once('funciones/conexion.php');//para poder llamar la consulta
+	require_once('funciones/conexion.php');//para poder llamar la consulta
 
 
-//creo una variable en lugar de siempre escribir session etc.
-//si logeo con un usuario existente  se crea una variable  de sesion llamada idUsuarion y se asigna el numero de id correspondiente al id de la tabla usuarios
+	//creo una variable en lugar de siempre escribir session etc.
+	//si logeo con un usuario existente  se crea una variable  de sesion llamada idUsuarion y se asigna el numero de id correspondiente al id de la tabla usuarios
 
 
-$id = $_SESSION['idUsuario'];
-$queryUsuarios = "SELECT * from usuarios";//me muestra todos los usuarios
+	$id = $_SESSION['idUsuario'];
+	$queryUsuarios = "SELECT * from usuarios";//me muestra todos los usuarios
 
 } else {
 	header ("Location:Login.php"); //si no esta registrado me redirige al log in
@@ -26,6 +26,8 @@ $queryUsuarios = "SELECT * from usuarios";//me muestra todos los usuarios
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+ 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 	</head>
 <body>
 
@@ -33,7 +35,7 @@ $queryUsuarios = "SELECT * from usuarios";//me muestra todos los usuarios
 <div class="container">
 <div class="row">
 
-	 <a href="">Cerrar sesion</a>
+	 <a href="logout.php">Cerrar sesion</a>
 
 </div>
 
@@ -47,7 +49,8 @@ $queryUsuarios = "SELECT * from usuarios";//me muestra todos los usuarios
     </tr>
   
   </thead>
-  <tbody>//hago una consulta que me muestre todo
+  <tbody>
+  	<!-- //hago una consulta que me muestre todo -->
 <?php
 	$consulta = mysqli_query($conexion,$queryUsuarios) or die (mysqli_error($conexion));//tengo que ejecutar la consulta, se guarda toda la info de la tabla
 	//como transformo este objeto en algo que entendamos, con un fetch_array
@@ -70,8 +73,10 @@ while($info =  mysqli_fetch_array($consulta) ){
     <tr>
       <td><?php echo $info['id']; ?></td>
       <td><?php echo $info['usuario']; ?></td>
-      <td><?php echo $info['password']; ?></td>
+      <td><?php echo md5($info['password']); ?></td>
+     <td><a href="editar.php?idEditar=<?php echo $info['id']; ?>"><i class="fas fa-pencil-alt"></i></a></td> <!--  agrego un lapicito, genero un link unico para cada usuario en una pagina aparte//abro php y lo conparo a la info del id -->
     </tr>
+    <!-- a hr -->
 
 
 <?php
