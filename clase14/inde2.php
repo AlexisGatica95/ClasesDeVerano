@@ -44,7 +44,9 @@ if(isset($_SESSION['idUsuario']) && !empty($_SESSION['idUsuario'])) //verifico q
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Usuario</th>
-      <th scope="col">Contraseña</th>
+	  <th scope="col">Contraseña</th>
+	  <th scoppe="col">Foto de perfil</th>
+	  <th scope="col"> enviar correo</th>
       
     </tr>
   
@@ -73,9 +75,12 @@ while($info =  mysqli_fetch_array($consulta) ){
     <tr>
       <td><?php echo $info['id']; ?></td>
       <td><?php echo $info['usuario']; ?></td>
-      <td><?php echo md5($info['password']); ?></td>
+	  <td><?php echo md5($info['password']); ?></td>
+	  <td><img width="50px" src="<?php echo $info['foto']; ?>"></td>
      <td><a href="editar.php?idEditar=<?php echo $info['id']; ?>"><i class="fas fa-pencil-alt"></i></a></td> <!--  agrego un lapicito, genero un link unico para cada usuario en una pagina aparte//abro php y lo conparo a la info del id -->
-    </tr>
+		<a href="enviarmail.php?id=<?php echo $info['id']; ?>">Enviar</a>
+	
+	</tr>
     <!-- a hr -->
 
 
